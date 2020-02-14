@@ -1,0 +1,19 @@
+uuid: 81d5e879-64f9-4bea-8258-1de57b5db130
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ucas_code
+    - node.type.course
+id: node.course.field_ucas_code
+field_name: field_ucas_code
+entity_type: node
+bundle: course
+label: UCAS
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 2759731f-e8bf-4577-bc51-f506381febe7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_qualification_type
+    - node.type.course
+id: node.course.field_qualification_type
+field_name: field_qualification_type
+entity_type: node
+bundle: course
+label: 'Qualification type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

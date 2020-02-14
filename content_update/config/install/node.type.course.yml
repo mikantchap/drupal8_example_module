@@ -1,0 +1,20 @@
+uuid: b18990fe-15b1-4d3b-b677-61ec3b508f8d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+  enforced:
+    module:
+    - content_update
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Course
+type: course
+description: Course
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

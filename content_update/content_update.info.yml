@@ -1,0 +1,5 @@
+name: Content Update
+type: module
+description: "Example module that updates content from an external source"
+package: Sample
+core: 8.x

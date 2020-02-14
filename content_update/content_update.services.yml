@@ -1,0 +1,29 @@
+parameters:
+    content_update.rows_min: 3
+    content_update.remove_action: delete
+
+services:
+    content_update.field_mapping:
+        class: Drupal\content_update\Services\FieldMapping
+    content_update.external_content:
+        class: Drupal\content_update\Services\ExternalContent    
+        arguments:
+            - '@content_update.field_mapping'
+    content_update.remove_drupal_content:
+        class: Drupal\content_update\Services\RemoveDrupalContent    
+        arguments:
+           -  '%content_update.remove_action%'
+           -  '@entity.query'
+           -  '@content_update.external_content'
+           -  '%content_update.rows_min%'
+    content_update.update_create_drupal_content:
+        class: Drupal\content_update\Services\UpdateCreateDrupalContent    
+        arguments:
+           -  '@entity.query'
+           -  '@content_update.external_content'
+           -  '@content_update.field_mapping'
+    content_update.content_update_listener:
+        class: Drupal\content_update\Services\CourseViewed
+        arguments: ['@logger.factory']
+        tags:
+            - {name: event_subscriber}            

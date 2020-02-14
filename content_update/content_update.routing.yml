@@ -1,0 +1,7 @@
+content_update.update:
+    path: /courses/update
+    defaults:
+        _controller: Drupal\content_update\Controller\ContentUpdateController::update
+        _title: Content Update report
+    requirements:
+        _permission: 'access content'
